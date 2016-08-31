@@ -1,0 +1,6 @@
+{
+  "name": "Iu5web",
+  "tagline": "",
+  "body": "### О курсе\r\n* Курс состоит из 16 лекций, 8 лабораторных и домашнего задания\r\n* Используемый стек технологий: Python 3.5.2, Django, MySQL, HTML, CSS, JS\r\n\r\n### Учебные материалы\r\n\r\n * [Методички](https://github.com/iu5team/iu5web/tree/master/labs)\r\n * [Лекции](https://github.com/iu5team/iu5web/tree/master/lectures)\r\n * [ДЗ](https://github.com/iu5team/iu5web/tree/master/homework)\r\n\r\n### Установка окружения на Windows\r\n\r\nTODO: Подробнее будет описано [здесь](https://github.com/iu5team/iu5web/blob/master/manual_install.md).\r\n\r\n### Полезные ссылки\r\n\r\nTODO\r\n\r\n### Авторы курса\r\n* Гапанюк Юрий Евгеньевич: TODO\r\n* Леонтьев Алексей: @alekseyl1992\r\n* Латкин Игорь: @igorcoding\r\n* Чернобровкин Сергей: @NapalmDeath\r\n* Павлов Максим: @bruderschaft\r\n* Ожегов Григорий: @grigory51\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
