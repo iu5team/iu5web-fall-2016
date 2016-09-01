@@ -4,10 +4,11 @@
 
 ### Учебные материалы
 
- * [Методички](https://github.com/iu5team/iu5web/tree/master/labs)
+ * [Методические указания по лабораторным работам](https://github.com/iu5team/iu5web/tree/master/labs)
+ * [ДЗ №1](https://github.com/iu5team/iu5web/tree/master/homework/rip_dz1.pdf)
+ * [ДЗ №2](https://github.com/iu5team/iu5web/tree/master/homework/ТЗ на ДЗ.pdf)
  * [Лекции](https://github.com/iu5team/iu5web/tree/master/lectures)
- * [ДЗ](https://github.com/iu5team/iu5web/tree/master/homework)
-
+ 
 ### Установка окружения на Windows
 
 TODO: Подробнее будет описано [здесь](https://github.com/iu5team/iu5web/blob/master/manual_install.md).
