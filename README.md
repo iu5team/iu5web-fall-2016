@@ -11,7 +11,7 @@
  
 ### Установка окружения на Windows
 
-TODO: Подробнее будет описано [здесь](https://github.com/iu5team/iu5web/blob/master/manual_install.md).
+Подробнее описано [здесь](https://github.com/iu5team/iu5web/blob/master/manual_install.md).
 
 ### Полезные ссылки
 
