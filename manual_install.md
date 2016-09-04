@@ -9,5 +9,5 @@
 
 ### Получение бесплатной лицензии на PyCharm Pro для студентов
  * https://www.jetbrains.com/shop/eform/students
- ** Используйте ящик в доменной зоне @student.bmstu.ru
- ** Или приложите скан студенческого билета на вкладке `Official document`
+ * Используйте ящик в доменной зоне @student.bmstu.ru
+ * Или приложите скан студенческого билета на вкладке `Official document`
