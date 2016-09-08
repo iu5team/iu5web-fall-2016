@@ -4,7 +4,8 @@
 
 ### Учебные материалы
 
- * [Методические указания по лабораторным работам](https://github.com/iu5team/iu5web/tree/master/labs)
+ * [Ведомость](https://docs.google.com/spreadsheets/d/1fCyF7xG42v-Y-TeLa03M5--EgTpjbofJ2GsEiDH8Wso/edit?usp=sharing)
+ * [Методические указания по ЛР](https://github.com/iu5team/iu5web/tree/master/labs)
  * [ДЗ №1](https://github.com/iu5team/iu5web/tree/master/homework/rip_dz1.pdf)
  * [ДЗ №2](https://github.com/iu5team/iu5web/tree/master/homework/ТЗ на ДЗ.pdf)
  * [Лекции](https://github.com/iu5team/iu5web/tree/master/lectures)
