@@ -8,7 +8,9 @@
  * [Методические указания по ЛР](https://github.com/iu5team/iu5web/tree/master/labs)
  * [ДЗ №1](https://github.com/iu5team/iu5web/tree/master/homework/rip_dz1.pdf)
  * [ДЗ №2](https://github.com/iu5team/iu5web/tree/master/homework/ТЗ на ДЗ.pdf)
- * [Лекции](https://github.com/iu5team/iu5web/tree/master/lectures)
+
+### Лекции
+ * [Лекция №3. Python. Введение.](https://docs.google.com/presentation/d/1GPU_ZRpMBL-31poOgjKHzRALKyA1eNHFgYUAYd1zcDM/edit?usp=sharing)
  
 ### Установка окружения на Windows
 
