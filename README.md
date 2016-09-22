@@ -11,6 +11,7 @@
 
 ### Лекции
  * [Лекция №3. Python. Введение.](https://docs.google.com/presentation/d/1GPU_ZRpMBL-31poOgjKHzRALKyA1eNHFgYUAYd1zcDM/edit?usp=sharing)
+ * [Лекция №4. Python. Классы.](https://docs.google.com/presentation/d/1fqQv35Gz4RElPvoR-1G79vkBg7l1aHayMBH45Z-IVtU/edit#slide=id.p)
  
 ### Установка окружения на Windows
 
