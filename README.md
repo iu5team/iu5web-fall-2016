@@ -1,6 +1,6 @@
 ### О курсе
 * Курс состоит из 16 лекций, 8 лабораторных и домашнего задания
-* Используемый стек технологий: Python 3.5, Django, MySQL, HTML, CSS, JS
+* Используемый стек технологий: Python 3.4, Django, MySQL, HTML, CSS, JS
 
 ### Учебные материалы
 
@@ -12,7 +12,7 @@
 ### Лекции
  * [Лекция №3. Python. Введение.](https://docs.google.com/presentation/d/1GPU_ZRpMBL-31poOgjKHzRALKyA1eNHFgYUAYd1zcDM/edit?usp=sharing)
  * [Лекция №4. Python. Классы.](https://docs.google.com/presentation/d/1fqQv35Gz4RElPvoR-1G79vkBg7l1aHayMBH45Z-IVtU/edit#slide=id.p)
- * [Лекция №5. Python. Функциональные возможности.](https://docs.google.com/presentation/d/1JkI3b0-XVK7E_YbagLgUYko8VoVr_Gqmp3VOfLzaaJE/edit#slide=id.p)
+ * [Лекция №5-6. Python. Функциональные возможности.](https://docs.google.com/presentation/d/1JkI3b0-XVK7E_YbagLgUYko8VoVr_Gqmp3VOfLzaaJE/edit#slide=id.p)
  
 ### Установка окружения на Windows
 
