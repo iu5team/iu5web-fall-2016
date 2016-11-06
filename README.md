@@ -10,10 +10,12 @@
  * [ДЗ №2](https://github.com/iu5team/iu5web/tree/master/homework/ТЗ на ДЗ.pdf)
 
 ### Лекции
- * [Лекция №3. Python. Введение.](https://docs.google.com/presentation/d/1GPU_ZRpMBL-31poOgjKHzRALKyA1eNHFgYUAYd1zcDM/edit?usp=sharing)
- * [Лекция №4. Python. Классы.](https://docs.google.com/presentation/d/1fqQv35Gz4RElPvoR-1G79vkBg7l1aHayMBH45Z-IVtU/edit#slide=id.p)
- * [Лекция №5-6. Python. Функциональные возможности.](https://docs.google.com/presentation/d/1JkI3b0-XVK7E_YbagLgUYko8VoVr_Gqmp3VOfLzaaJE/edit#slide=id.p)
- * [Лекция №7. Сеть.](https://drive.google.com/open?id=1mxkUMSBFUVW0WPVBoJx-e_2eIKDeqd0mK9N92Z4523U)
+ * [Лекция №3. Python. Введение](https://docs.google.com/presentation/d/1GPU_ZRpMBL-31poOgjKHzRALKyA1eNHFgYUAYd1zcDM/edit?usp=sharing)
+ * [Лекция №4. Python. Классы](https://docs.google.com/presentation/d/1fqQv35Gz4RElPvoR-1G79vkBg7l1aHayMBH45Z-IVtU/edit#slide=id.p)
+ * [Лекция №5-6. Python. Функциональные возможности](https://docs.google.com/presentation/d/1JkI3b0-XVK7E_YbagLgUYko8VoVr_Gqmp3VOfLzaaJE/edit#slide=id.p)
+ * [Лекция №7. Сеть](https://drive.google.com/open?id=1mxkUMSBFUVW0WPVBoJx-e_2eIKDeqd0mK9N92Z4523U)
+ * [Лекция №8. Frontend](https://docs.google.com/presentation/d/1YUeyVT-xjm67VEnu1JpUcr-b6gRC-KFW8SiV6WLRY0k/edit?usp=sharing)
+ * [Лекция №9. Django 1](https://docs.google.com/presentation/d/1M7XxaW4JM5iYIwlgzzzxusIOAx3rILGUFFD6ZfDf470/edit?usp=sharing)
  
 ### Установка окружения на Windows
 
