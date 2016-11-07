@@ -16,6 +16,7 @@
  * [Лекция №7. Сеть](https://drive.google.com/open?id=1mxkUMSBFUVW0WPVBoJx-e_2eIKDeqd0mK9N92Z4523U)
  * [Лекция №8. Frontend](https://docs.google.com/presentation/d/1YUeyVT-xjm67VEnu1JpUcr-b6gRC-KFW8SiV6WLRY0k/edit?usp=sharing)
  * [Лекция №9. Django 1](https://docs.google.com/presentation/d/1M7XxaW4JM5iYIwlgzzzxusIOAx3rILGUFFD6ZfDf470/edit?usp=sharing)
+ * [Лекция №10. База данных](https://docs.google.com/presentation/d/1Zb-nPIrA_449IZvwTK47ZSU5dEEDQAW_Q2ZRcS3icQw/edit?usp=sharing)
  
 ### Установка окружения на Windows
 
