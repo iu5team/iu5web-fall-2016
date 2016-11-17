@@ -18,6 +18,7 @@
  * [Лекция №9. Django 1](https://docs.google.com/presentation/d/1M7XxaW4JM5iYIwlgzzzxusIOAx3rILGUFFD6ZfDf470/edit?usp=sharing)
  * [Лекция №10. База данных](https://docs.google.com/presentation/d/1Zb-nPIrA_449IZvwTK47ZSU5dEEDQAW_Q2ZRcS3icQw/edit?usp=sharing)
  * [Лекция №11. Модели](https://drive.google.com/open?id=1gWk_Z2C5RnxkF4HmfmA4B-k1eaZ6aoX0BC-CePXFoXY)
+ * [Лекция №12. Формы и авторизация](https://docs.google.com/presentation/d/1-qETqNEQwMTQ2dhWu_5c82htpfLK3mYyqid51qm1xN0/edit?usp=sharing)
  
 ### Установка окружения на Windows
 
