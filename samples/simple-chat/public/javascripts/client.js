@@ -2,21 +2,21 @@
 $(onLoad);
 
 function onLoad() {
-    var $messages = $('.messages');
+    const $messages = $('.messages');
 
-    var $messageForm = $('.message-form');
-    var $text = $messageForm.find('.message-form__text');
-    var $send = $messageForm.find('.message-form__send');
+    const $messageForm = $('.message-form');
+    const $text = $messageForm.find('.message-form__text');
+    const $send = $messageForm.find('.message-form__send');
 
-    var fromId = -1;
+    let fromId = -1;
 
     $send.click(function(e) {
         e.preventDefault();
 
-        var text = $text.val();
+        const text = $text.val();
 
         if (text) {
-            var data = {
+            const data = {
                 'text': text
             };
 
@@ -44,10 +44,10 @@ function onLoad() {
                     return;
                 }
 
-                var lastMessage = res.messages[res.messages.length - 1];
+                const lastMessage = res.messages[res.messages.length - 1];
                 fromId = lastMessage.id;
 
-                for (var i = 0; i < res.messages.length; ++i) {
+                for (let i = 0; i < res.messages.length; ++i) {
                     addMessage(res.messages[i]);
                 }
 
@@ -55,14 +55,14 @@ function onLoad() {
             })
             .fail(function(error) {
                 alert('Failed to get messages');
-                console.log(error);
+                console.error(error);
             });
     }
 
     function addMessage(message) {
-        var text = '<div>' + message.text + '</div>';
+        const text = '<div>' + message.text + '</div>';
 
-        var $message = $(text);
+        const $message = $(text);
         $message.appendTo($messages);
     }
 }
