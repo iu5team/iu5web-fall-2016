@@ -43,6 +43,7 @@
     </groups>
     <meta
             formal_questions_count="2"
+            groups_count="3"
             questions_per_group="1"
             tickets_count="30"
     />

@@ -58,7 +58,7 @@ def generate(xml_file, template_file, output_file):
             ids = np.random.choice(len(group_questions), min(questions_in_group, questions_per_group), False)
             for _id in ids:
                 title = group_questions[_id].attrib['title']
-                text = group_questions[_id].text
+                text = group_questions[_id].text or ''
                 questions.append({
                     'title': title,
                     'text': text.strip(),
