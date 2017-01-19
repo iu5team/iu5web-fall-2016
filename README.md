@@ -21,6 +21,7 @@
  * [Лекция №11. Модели](https://drive.google.com/open?id=1gWk_Z2C5RnxkF4HmfmA4B-k1eaZ6aoX0BC-CePXFoXY)
  * [Лекция №12. Формы и авторизация](https://docs.google.com/presentation/d/1-qETqNEQwMTQ2dhWu_5c82htpfLK3mYyqid51qm1xN0/edit?usp=sharing)
  * [Лекция №13. Основы JS](https://drive.google.com/open?id=1LRQYD5LRW16qBh4EpttbZjxQMD-CI-bXrOUDDZowpbQ)
+ * [Лекция №14. Асинхронность. Применение JS](https://docs.google.com/presentation/d/11nw1XMIAWgbaIrCo9KE_sLh8X1DPA95KOU3ukoYfijM/edit?usp=sharing)
  
 ### Установка окружения на Windows
 
