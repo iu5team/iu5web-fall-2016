@@ -8,7 +8,7 @@
  * [Ведомость](https://docs.google.com/spreadsheets/d/1fCyF7xG42v-Y-TeLa03M5--EgTpjbofJ2GsEiDH8Wso/edit?usp=sharing)
  * [Методические указания по ЛР](https://github.com/iu5team/iu5web/tree/master/labs)
  * [ДЗ №1](https://github.com/iu5team/iu5web/tree/master/homework/rip_dz1.pdf)
- * [ДЗ №2](https://github.com/iu5team/iu5web/tree/master/homework/ТЗ на ДЗ.pdf)
+ * [ДЗ №2](https://github.com/iu5team/iu5web/tree/master/homework/ТЗ%20на%20ДЗ.pdf)
 
 ### Лекции
  * [Лекция №3. Python. Введение](https://docs.google.com/presentation/d/1GPU_ZRpMBL-31poOgjKHzRALKyA1eNHFgYUAYd1zcDM/edit?usp=sharing)
