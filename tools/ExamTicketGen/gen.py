@@ -55,14 +55,13 @@ def russian_month(m):
 
 def generate(args, questions_file, template_file, output_file):
     groups, group_types = parse_questions(questions_file)
+    
+    if args.groups is not None:
+        use_groups = args.groups.split(',')
+        groups = list(filter(lambda g: g['short'] in use_groups, groups))
 
     if args.groups_count is None:
         args.groups_count = len(groups)
-        
-        if args.groups is not None:
-            use_groups = args.groups.split(',')
-            groups = list(filter(lambda g: g['short'] in use_groups, groups))
-            args.groups_count = len(groups)
 
     if args.formal_questions_count is None:
         args.formal_questions_count = args.groups_count
