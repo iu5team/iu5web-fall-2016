@@ -1,7 +1,9 @@
 import argparse
+import datetime
 from enum import Enum
 
 import numpy as np
+import os
 import re
 from docxtpl import DocxTemplate
 
@@ -27,20 +29,40 @@ def print_to_stdout(tickets):
         print('')
 
 
-def save_to_docx(tickets, template_file, output_file):
+def save_to_docx(template_file, output_file, ctx):
     doc = DocxTemplate(template_file)
-    context = {
-        'tickets': tickets
-    }
-    doc.render(context)
+    
+    doc.render(ctx)
     doc.save(output_file)
+    
+
+def russian_month(m):
+    return {
+        1: 'января',
+        2: 'февраля',
+        3: 'марта',
+        4: 'апреля',
+        5: 'мая',
+        6: 'июня',
+        7: 'июля',
+        8: 'августа',
+        9: 'сентября',
+        10: 'октября',
+        11: 'ноября',
+        12: 'декабря',
+    }[m]
 
 
 def generate(args, questions_file, template_file, output_file):
-    groups = parse_questions(questions_file)
+    groups, group_types = parse_questions(questions_file)
 
     if args.groups_count is None:
         args.groups_count = len(groups)
+        
+        if args.groups is not None:
+            use_groups = args.groups.split(',')
+            groups = list(filter(lambda g: g['short'] in use_groups, groups))
+            args.groups_count = len(groups)
 
     if args.formal_questions_count is None:
         args.formal_questions_count = args.groups_count
@@ -73,7 +95,16 @@ def generate(args, questions_file, template_file, output_file):
         })
 
     # print_to_stdout(tickets)
-    save_to_docx(tickets, template_file, output_file)
+    ctx = {
+        'course_name': args.title,
+        'tickets': tickets,
+        'date': {
+            'day': args.date.day,
+            'month': russian_month(args.date.month),
+            'year': args.date.year
+        },
+    }
+    save_to_docx(template_file, output_file, ctx)
 
 
 def parse_questions(questions_file):
@@ -87,6 +118,7 @@ def parse_questions(questions_file):
     state = State.BEGIN
 
     groups = []
+    group_types = []
 
     question = {}
     group = {}
@@ -108,13 +140,16 @@ def parse_questions(questions_file):
     def save_group():
         nonlocal group
         groups.append(group)
+        group_types.append(group['short'])
         group = {}
 
     def create_group(title):
-        group['title'] = title
+        short, title = title.split('|')
+        group['short'] = short.strip()
+        group['title'] = title.strip()
         group['questions'] = []
 
-    with open(questions_file, encoding='utf-8') as f:
+    with open(questions_file, encoding='utf-8-sig') as f:
         for line in f:
             line = line.strip()
 
@@ -163,7 +198,7 @@ def parse_questions(questions_file):
     if group['title']:
         save_group()
 
-    return groups
+    return groups, group_types
 
 
 def main():
@@ -181,9 +216,24 @@ def main():
     parser.add_argument('--tickets_count', type=int,
                         default=30,
                         help='total amount of tickets, default = 30')
+    parser.add_argument('--groups', type=str,
+                        default=None,
+                        help='groups to use')
+    parser.add_argument('--out', type=str,
+                        default='tickets.docx',
+                        help='output filename')
+    parser.add_argument('--title', type=str,
+                        default='Разработка интернет-приложений',
+                        help='submission date (dd.MM.yyyy)')
+    parser.add_argument('--date', type=str,
+                        default='11.12.2016',
+                        help='submission date (dd.MM.yyyy)')
     args = parser.parse_args()
+    args.date = datetime.datetime.strptime(args.date, '%d.%m.%Y')
 
-    generate(args, 'data/questions.txt', 'data/template.docx', 'data/tickets.docx')
+    if not os.path.exists('out'):
+        os.mkdir('out')
+    generate(args, 'data/questions.txt', 'data/template.docx', os.path.join('out', args.out))
 
 
 if __name__ == '__main__':

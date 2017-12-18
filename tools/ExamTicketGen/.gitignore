@@ -1,3 +1,4 @@
 .idea/
-data/tickets.docx
-data/tickets.pdf
+out
+env
+*.py[co]
