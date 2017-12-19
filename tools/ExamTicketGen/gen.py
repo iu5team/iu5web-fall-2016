@@ -218,6 +218,9 @@ def main():
     parser.add_argument('--groups', type=str,
                         default=None,
                         help='groups to use')
+    parser.add_argument('--input', type=str,
+                        default='questions.txt',
+                        help='input filename')
     parser.add_argument('--out', type=str,
                         default='tickets.docx',
                         help='output filename')
@@ -232,7 +235,10 @@ def main():
 
     if not os.path.exists('out'):
         os.mkdir('out')
-    generate(args, 'data/questions.txt', 'data/template.docx', os.path.join('out', args.out))
+    generate(args,
+             os.path.join('data', args.input),
+             'data/template.docx',
+             os.path.join('out', args.out))
 
 
 if __name__ == '__main__':
