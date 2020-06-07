@@ -1,6 +1,8 @@
 import argparse
 import datetime
 from enum import Enum
+from collections import defaultdict
+import math
 
 import numpy as np
 import os
@@ -31,10 +33,10 @@ def print_to_stdout(tickets):
 
 def save_to_docx(template_file, output_file, ctx):
     doc = DocxTemplate(template_file)
-    
+
     doc.render(ctx)
     doc.save(output_file)
-    
+
 
 def russian_month(m):
     return {
@@ -55,7 +57,7 @@ def russian_month(m):
 
 def generate(args, questions_file, template_file, output_file):
     groups, group_types = parse_questions(questions_file)
-    
+
     if args.groups is not None:
         use_groups = args.groups.split(',')
         groups = list(filter(lambda g: g['short'] in use_groups, groups))
@@ -74,6 +76,12 @@ def generate(args, questions_file, template_file, output_file):
         for _id in ids:
             selected_groups.append(groups[_id])
 
+        if args.desired_questions_count > args.formal_questions_count:
+            extra = args.desired_questions_count - args.formal_questions_count
+            for _ in range(extra):
+                g = np.random.randint(0, len(groups))
+                selected_groups.append(groups[g])
+
         # collect all questions to one list
         questions = []
         for group in selected_groups:
@@ -88,12 +96,25 @@ def generate(args, questions_file, template_file, output_file):
             for _id in ids:
                 questions.append(group_questions[_id])
 
-        formal_questions = array_split(questions, args.formal_questions_count)
+        if args.desired_questions_count > args.formal_questions_count:
+            formal_questions_dict = defaultdict(list)
+            for q in questions:
+                formal_questions_dict[q['group']].append(q)
+
+            new_formal_questions = []
+            for _, arr in formal_questions_dict.items():
+                titles = list(map(lambda x: x['title'], arr))
+                qq = arr[0].copy()
+                qq['title'] = ' '.join(titles)
+                new_formal_questions.append(qq)
+            questions = new_formal_questions
+        formal_questions = array_split(questions, min(args.formal_questions_count, args.desired_questions_count))
+
         tickets.append({
             'formal_questions': formal_questions
         })
 
-    # print_to_stdout(tickets)
+    print_to_stdout(tickets)
     ctx = {
         'course_name': args.title,
         'tickets': tickets,
@@ -209,9 +230,13 @@ def main():
                         default=None,
                         help='amount of groups to peek from, default - all groups')
     parser.add_argument('--formal_questions_count', type=int,
-                        default=None,
+                        default=3,
                         help='amount of items per ticket (one item can contain 1 ot more questions), '
                              'default = groups_count')
+    parser.add_argument('--desired_questions_count', type=int,
+                        default=4,
+                        help='amount of desired questions per ticket (one item can contain 1 ot more questions), '
+                             'default = formal_questions_count')
     parser.add_argument('--tickets_count', type=int,
                         default=30,
                         help='total amount of tickets, default = 30')
@@ -219,7 +244,7 @@ def main():
                         default=None,
                         help='groups to use')
     parser.add_argument('--input', type=str,
-                        default='questions.txt',
+                        default='questions-2018.txt',
                         help='input filename')
     parser.add_argument('--out', type=str,
                         default='tickets.docx',
@@ -232,6 +257,9 @@ def main():
                         help='submission date (dd.MM.yyyy)')
     args = parser.parse_args()
     args.date = datetime.datetime.strptime(args.date, '%d.%m.%Y')
+
+    if not args.desired_questions_count:
+        args.desired_questions_count = args.formal_questions_count
 
     if not os.path.exists('out'):
         os.mkdir('out')
